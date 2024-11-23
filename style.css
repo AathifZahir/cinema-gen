@@ -1,0 +1,26 @@
+/* style.css */
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+#fact-display {
+  min-height: 100px;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
