@@ -1,4 +1,3 @@
-// script.js
 const facts = [
   "The first film ever made was 'Roundhay Garden Scene' (1888), lasting only 2.11 seconds",
   "The Matrix code was inspired by sushi recipes",
@@ -29,3 +28,43 @@ document
   .addEventListener("click", displayRandomFact);
 // Display initial fact when page loads
 window.onload = displayRandomFact;
+
+// Get the share button element
+const shareButton = document.getElementById("share-fact");
+const factText = document.getElementById("fact-text");
+
+// Add click event listener to the share button
+shareButton.addEventListener("click", async () => {
+  const textToShare = factText.textContent;
+
+  // Check if Web Share API is supported
+  if (navigator.share) {
+    try {
+      await navigator.share({
+        title: "Cinema Fact",
+        text: textToShare,
+        url: window.location.href,
+      });
+      console.log("Content shared successfully");
+    } catch (err) {
+      console.log("Error sharing:", err);
+    }
+  } else {
+    // Fallback to clipboard copying
+    try {
+      await navigator.clipboard.writeText(textToShare);
+
+      // Provide visual feedback
+      const originalText = shareButton.textContent;
+      shareButton.textContent = "Copied!";
+
+      // Reset button text after 2 seconds
+      setTimeout(() => {
+        shareButton.textContent = originalText;
+      }, 2000);
+    } catch (err) {
+      console.log("Error copying to clipboard:", err);
+      alert("Unable to share. Please try copying the text manually.");
+    }
+  }
+});

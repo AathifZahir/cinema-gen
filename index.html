@@ -1,16 +1,31 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Fun Facts Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinema Facts Generator</title>
+    <link rel="icon" type="image/jpg" href="imgs/logo.jpg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
-      <h1>Fun Facts Generator</h1>
-      <div id="fact-display"></div>
-      <button id="new-fact">Generate New Fact</button>
+      <h1>Cinema Facts Generator</h1>
+      <div id="fact-display">
+        <p id="fact-text">
+          Click the button below to generate a fascinating cinema fact!
+        </p>
+      </div>
+      <div class="button-container">
+        <button id="new-fact" class="pulse">Generate New Fact</button>
+        <button id="share-fact" class="secondary">Share Fact</button>
+      </div>
+      <footer>
+        <p>Created with ❤️ for cinema lovers</p>
+      </footer>
     </div>
     <script src="script.js"></script>
   </body>
