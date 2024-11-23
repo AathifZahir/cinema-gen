@@ -46,18 +46,6 @@ cd cinema-gen
 
 3. Open index.html in your browser or use a local development server
 
-## 🎨 Project Structure
-
-```
-cinema-gen/
-├── imgs/
-│   └── i1.jpg
-├── index.html
-├── style.css
-├── script.js
-└── README.md
-```
-
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to:
