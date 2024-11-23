@@ -13,7 +13,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../imgs/i1.jpg");
+  background-image: url("./imgs/i1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -31,7 +31,7 @@ body::before {
   left: 0; /* Extend beyond viewport */
   width: calc(100%); /* Add extra width to cover blur edges */
   height: calc(100%); /* Add extra height to cover blur edges */
-  background-image: url("../imgs/i1.jpg");
+  background-image: url("./imgs/i1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
